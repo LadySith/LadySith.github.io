@@ -1,0 +1,16 @@
+# Site Settings
+title: Sithe Ncube
+email: me.sithe.ncube@gmail.com
+description: >
+  Programming Pixels Playing Prototypes and Pie in the sky ideas
+baseurl: ""
+url: "http://ladysith.github.io"
+twitter_username: _LadySith
+github_username:  LadySith
+# Build Settings
+sass:
+  sass_dir: _sass
+  style: nested
+include: ['_pages']
+kramdown:
+  input: GFM

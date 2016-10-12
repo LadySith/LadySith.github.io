@@ -1,0 +1,18 @@
+$content-width: 800px;
+$main: #3E8FBE;
+$font: 'Open Sans', sans-serif;
+$font-color: #4F4F4F;
+$link-color: #2D6C93;
+$link-hover-color: #3E8FBE;
+$heading-font: 'Galada', cursive;
+$heading-font-color: $link-color;
+$light: #E7EDF4;
+$header:  #F3C83C;
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

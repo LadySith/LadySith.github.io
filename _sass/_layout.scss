@@ -1,0 +1,220 @@
+body {
+	margin: 0;
+	font-family: $font;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.1em;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3 {
+	font-weight: 600;
+	font-family: $heading-font;
+	line-height: 1.5;
+}
+h1 {
+	color: $main;
+	font-size: 20vmin;
+	text-align: center;
+}
+h2 {
+	font-size: 2em;
+}
+
+header {
+	background: $header;
+	margin: 0 0 0;
+	height: 100vh;
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+	position: relative;
+		nav {
+			float: right;
+			margin: 30px 30px 0 0;
+			font-size: 3em;
+			font-color: $main;
+			a {
+				display: inline-block;
+				margin-left: 20px;
+				font-family: 'Oxygen', sans-serif;
+				color: $link-color;
+				text-decoration: none;
+				z-index: 4;
+			}
+			a:hover {
+				color: $link-hover-color;
+			}
+		}
+		.text--line {
+  		font-family: 'Galada', cursive;
+  		font-size: 120pt;
+  	}
+		svg {
+			margin-top: 120px;
+  		position: absolute;
+  		width: 100%;
+  		height: 100%;
+  	}
+
+		$max: 5;
+		$stroke-step: 10%;
+		.text-copy {
+  		fill: none;
+  		stroke: white;
+  		stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
+  		stroke-width: 2px;
+
+  		animation: stroke-offset 7s ease;
+
+  		@for $item from 1 through $max {
+
+    	&:nth-child(#{$item}) {
+      	stroke-dashoffset: $stroke-step * $item;
+      }
+    	}
+  	}
+
+		@keyframes stroke-offset {
+  		50% {
+    		stroke-dashoffset: $stroke-step * $max;
+    		stroke-dasharray: 0 $stroke-step * $max*2.5;
+  		}
+		}
+}
+
+//Main
+main {
+	padding: 0 15px;
+	height: 450px;
+	max-width: $content-width;
+	margin: 0 auto;
+}
+time {
+	color: #898989;
+}
+.container {
+	max-width: $content-width;
+	margin: 0 auto;
+}
+
+//Parallax
+.slider {
+	height: 800px;
+	z-index: -1;
+	background: linear-gradient(130deg, #55a8d8, #2d3993);
+	background-size: 400% 400%;
+	-webkit-animation: SkyGroove 11s ease infinite;
+	-moz-animation: SkyGroove 11s ease infinite;
+	-o-animation: SkyGroove 11s ease infinite;
+	animation: SkyGroove 11s ease infinite;
+	@-webkit-keyframes SkyGroove {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+	}
+	@-moz-keyframes SkyGroove {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+	}
+	@-o-keyframes SkyGroove {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+	}
+	@keyframes SkyGroove {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+	}
+}
+
+//Footer
+footer {
+	text-align: center;
+	background: #F3C83C;
+	width: 100%;
+	z-index: 3;
+	height: 450px;
+	box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.3);
+	.footercontainer {
+		width: 100%;
+	}
+	.footnote {
+		font-family: 'Oxygen', sans-serif;
+		color: rgba(0, 0, 0, 0.5);
+		a {
+			color: rgba(0, 0, 0, 0.8);
+			text-decoration: none;
+		}
+		a:hover {
+			color: $main
+		}
+	}
+	p {
+		color: rgba(0, 0, 0, 0.5);
+	}
+}
+.soc {
+  display: block;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 48px; // IE8
+  padding: 4.8rem;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 12px; // IE8
+    margin: 1.2rem;
+	}
+  a, svg {
+    display: block;
+	}
+  a {
+    position: relative; // IE8
+    height: 96px; // IE8
+    height: 9.6rem;
+    width: 96px; // IE8
+    width: 9.6rem;
+	}
+  svg {
+    height: 100%;
+    width: 100%;
+	}
+  // IE8:
+  em {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: -.75em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	}
+
+	//Social icons
+
+%social-icon-hover {
+  border-radius: 100%;
+  color: $header; // IE8
+  fill: $header;
+  transform: scale(1.1);
+  transition: background-color .5s, transform .5s ease-out;
+}
+
+// Neat color trick, <3 Sass
+@for $i from 1 through 5 {
+  .icon-#{$i}{
+    color: #fff; // IE8
+    fill: #fff;
+    &:hover {
+      background: #fff;
+      @extend %social-icon-hover;
+		}
+		}
+}
+
+}
