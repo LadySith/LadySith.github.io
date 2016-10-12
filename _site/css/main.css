@@ -17,37 +17,45 @@ h1,
 h2,
 h3 {
   font-weight: 600;
-  font-family: "Galada", cursive;
+  font-family: 'Oxygen', sans-serif;
   line-height: 1.5; }
 
 h1 {
   color: #3E8FBE;
-  font-size: 20vmin;
+  font-size: 3em;
   text-align: center; }
 
 h2 {
   font-size: 2em; }
 
-header {
-  background: #F3C83C;
+nav {
   margin: 0 0 0;
-  height: 100vh;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-  position: relative; }
-  header nav {
-    float: right;
-    margin: 30px 30px 0 0;
-    font-size: 3em;
-    font-color: #3E8FBE; }
-    header nav a {
+  min-width: 400px;
+  font-size: 3em;
+  color: #3E8FBE;
+  z-index: 4; }
+  nav ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right; }
+    nav ul.navbar li {
+      float: right;
+      position: relative;
+      margin-right: 50px; }
+    nav ul.navbar a {
       display: inline-block;
-      margin-left: 20px;
       font-family: 'Oxygen', sans-serif;
       color: #2D6C93;
-      text-decoration: none;
-      z-index: 4; }
-    header nav a:hover {
+      text-decoration: none; }
+    nav ul.navbar a:hover {
       color: #3E8FBE; }
+
+header {
+  background: #F3C83C;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); }
   header .text--line {
     font-family: 'Galada', cursive;
     font-size: 120pt; }
@@ -128,23 +136,26 @@ time {
     background-position: 0% 82%; } }
 footer {
   text-align: center;
+  margin-bottom: 0;
   background: #F3C83C;
   width: 100%;
   z-index: 3;
-  height: 450px;
   box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.3); }
   footer .footercontainer {
-    width: 100%; }
+    width: 100%;
+    background: #F3C83C; }
   footer .footnote {
     font-family: 'Oxygen', sans-serif;
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.5);
+    background: #F3C83C; }
     footer .footnote a {
       color: rgba(0, 0, 0, 0.8);
       text-decoration: none; }
     footer .footnote a:hover {
       color: #3E8FBE; }
   footer p {
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.5);
+    background: #F3C83C; }
 
 .soc {
   display: block;
@@ -153,7 +164,8 @@ footer {
   margin: 0;
   padding: 48px;
   padding: 4.8rem;
-  text-align: center; }
+  text-align: center;
+  background: #F3C83C; }
   .soc li {
     display: inline-block;
     margin: 12px;
