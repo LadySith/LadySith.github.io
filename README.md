@@ -1,7 +1,7 @@
 Personal Website and Blog
 ===================
 
-It's up! Also it pretty much looks just like the mockup. Yes it's simple. But that's a great starting point. Currently I don't have my resume up here and the 'Blog' button links to my not so impressive Wordpress blog. All this will be taken care of eventually.. or never. idk.
+It's up! Also it pretty much looks just like the mockup (except it's not responsive and the clouds are missing but this will suffice for now). Yes it's simple. But that's a great starting point. Currently I don't have my resume up here and the 'Blog' button links to my not so impressive Wordpress blog. All this will be taken care of eventually.. or never. idk.
 
 ## To do list
 1. Cloud animations
